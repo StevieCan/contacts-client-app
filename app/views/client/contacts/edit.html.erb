@@ -1,0 +1,25 @@
+<%= form_tag "/client/contacts/#{@contact_id}", method: :patch do%>
+  <div>
+    Full Name: <input type="text" name="full_name" value="<% @contact["full_name"] %>">
+  </div>
+  <div>
+    First Name: <input type="text" name="first_name" value="<% @contact["first_name"] %>">
+  </div>
+  <div>
+    Middle Name: <input type="text" name="middle_name" value="<% @contact["middle_name"] %>">
+  </div>
+  <div>
+    Last Name: <input type="text" name="last_name" value="<% @contact["last_name"] %>">
+  </div>
+  <div>
+    Email: <input type="text" name="email" value="<% @contact["email"] %>">
+  </div>
+  <div>
+    Phone Number: <input type="text" name="phone_number" value="<% @contact["phone_number"] %>">
+  </div>
+  <div>
+    Bio: <textarea> type="text" name="bio"><%= @contact["bio"] %></textarea>
+  </div>
+  <input type="Submit" name="Update Contact">
+<!-- </form> -->
+<% end %>
